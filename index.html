@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title> Flurgo </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+        <link rel="stylesheet" href="style.css" />
+
+    </head>
+
+    <body>
+
+         <div class="container-fluid prod-wrapper">
+            <nav class="nav-header">
+               <img src="img/logo.png" />
+               <!--<button class="sing-btn float-right"> Sign in </button>-->
+            </nav>
+
+            <section class="landing-section">
+                <h2 class="text-center"> 
+                    <div> A better way to </div>
+                    <div> build successful careers </div> 
+                </h2>
+                <p class="text-center"> Flurgo is a verified community of professionals helping each other grow </p>
+                
+                <div class="text-box-wrapper">
+                    <input type="text" placeholder="Email ID" id="email1"/>
+                    <button onClick="requestAccess1()" id="access-button"> Request Access </button>
+                </div> 
+            </section>
+            <div class="position-relative">
+                <div class="bg-image"> 
+                    <img src="img/BigImage.svg" />
+                </div>
+                <section class="access-section clearfix">
+                    <div class="clearfix">
+                        <p class="text-center"> 
+                                Connect with a Flurgo peer member <br/>
+                                to get help with your query on  
+                        </p>
+                        <p class="suggested-areas">
+                                Suggested Areas
+                        </p>                            
+                        <div class="thumbs-wrapper">                        
+                            <span class="each-thumbs"> 
+                                    Industry Information
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Job Hunt
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Study Abroad
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Job Role Prospects
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Skills worth having
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Industry Jump
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Course Selection
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Company Referrals
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Return after Career Breaks
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Entrepreneurship
+                            </span>
+                            <span class="each-thumbs"> 
+                                    Networking & More
+                            </span>
+                        </div>
+
+                        <button class="req-btn"> Request Access </button>
+                    </div>
+
+                </section>
+
+                <section class="girl-sitting-section clearfix"> 
+                    <div class="clearfix first-nest-box">
+                        <div class="first-nested-block clear clearfix">
+                            <div class="nested-block clearfix">
+                                <h2> Seeking Expert Guidance & advice? </h2>
+                                <p class="display-inline-block"> Flurgo brings leading industry experts, from popular organisations & institutions with a drive towards creating value in the ecosystem to you for <span class="blue-underlined">one-to-one mentorship sessions</span>. A powerful tool that turns <span class="blue-plain">advice into actionable insights</span> for you to keep track. </p> 
+                                <p class="display-inline-block float-left"> 
+                                    Just tell us about your -  <span class="blue-plain">Industry</span>,  <span class="blue-plain">Interest</span> and give us a  <span class="blue-plain">compelling agenda</span>, if you are selected we will get you connected with them for a dedicated session. 
+                                </p>
+                                <span class="float-left sitting-girl-right-span">
+                                    <p>
+                                        <img src="img/MentorBoxGirl.png" class="sitting-girl-right">
+                                    </p>
+                                    <button class="second-blue-btn "> Get Mentored </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="nested-block second-block clear clearfix">
+                            <button class="big-btn"> 
+                                    Industry Specific Resources and Tools
+                            </button>
+        
+                            <p class="under-para"> Random searches, irrelevant information or missed opportunities is so yesterday. Here’s how Flurgo can help  </p>
+                            <ul class="first-list list-yellow-buttlet">
+                                <li> Indexed list of grants, scholarships, universities, competitons & events </li>
+                                <li> Access to industry reports, trend alerts tailored just as you need  </li>
+                                <li> Tools, blogs, softwares indexed neatly so you don’t lose track </li>
+                            </ul>
+                            <button class="blue-btn"> Request Access </button>
+                        </div>
+                        
+                    </div>
+                </section>  
+
+            </div>
+
+            <section class="thumbs-section">
+                <h2> Who is Flurgo For? </h2>
+                <div class="four-thumb-wrapper">
+                    <div class="each-thumb"> 
+                        <h3> Professionals </h3>
+                        <ul class="list-yellow-buttlet list-yellow-buttlet-boxes second-list-bullet">
+                            <li> Peer-to-Peer Networking  for industry jump, job switch, vertical shift </li>
+                            <li> Mentoring on job roles, industry insights and more </li>
+                            <li> Exploring entrepreneurial, VC & PE careers </li>
+                            <li> Industry relevant resources and trend reports </li>
+                        </ul>
+                    </div>
+                    <div class="each-thumb"> 
+                        <h3> Students </h3>
+                        <ul class="list-yellow-buttlet list-yellow-buttlet-boxes second-list-bullet">
+                            <li> Peer-to-Peer Networking  for job search, internship opportunities, research initiatives & more </li>
+                            <li> Help & guidance for studying & working abroad  </li>
+                            <li> Mentor connects for industry knowledge, information on skill development & more </li>
+                        </ul>
+                    </div>
+                    <div class="each-thumb"> 
+                        <h3> Organizations </h3>
+                        <ul class="list-yellow-buttlet list-yellow-buttlet-boxes second-list-bullet">
+                            <li> Framework to conduct inter-organisation mentoring, tracking progress & resource sharing </li>
+                            <li> Access to a community verified, quality people for you job listings </li>
+                            <li> Create value for your management when they mentor young professionals to drive the ecosystem forward </li>
+                        </ul>
+                    </div>
+                    <div class="each-thumb"> 
+                        <h3> Community Leaders </h3>
+                        <ul class="list-yellow-buttlet list-yellow-buttlet-boxes second-list-bullet">
+                            <li> Multiple channels that can unlimited users. Bid adieu to juggling platforms and groups </li>
+                            <li> Manage your current herd and grow your community with verified people on Flurgo </li>
+                            <li> Your members will wear your community badge and have their applications fast tracked when you recommend and more </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="blue-btn"> Request Access </button>
+                
+            </section>
+
+            <section class="row-img">
+
+                <img src="img/flurgo-row-img.svg">
+
+            </section>
+
+            <section class="two-sub-section clearfix d-flex">
+                <div class="col-md-5 float-left">
+                    <img src="img/undraw_status_update_jjgk.svg">
+                </div>
+                <div class="col-md-7 float-left">
+                    <div>
+                    <h3> Focus on what’s important - Learning & Applying
+                            The rest is on us </h3>
+                    <p> A dashboard that manages & tracks your learning goals, job hunt, applications and communications. </p>
+                    </div>
+                </div>
+            </section>
+            <section class="two-sub-section clearfix d-flex">
+                <div class="col-md-5 float-left mobile-networking">
+                    <img src="img/Networking.svg">
+                </div>
+                <div class="col-md-7 float-left">
+                    <div>
+                        <h3> Professional Network that’s more than notes and mails </h3>
+                        <p> Our evaluation model derives insights on your personality and cognitive alignments. The AI driven recommendation engines works on all your data to suggest connections that matters and people who are more likely to connect with you. </p>
+                    </div>
+                </div>
+                <div class="col-md-5 float-left desktop-networking">
+                    <img src="img/Networking.svg">
+                </div>
+            </section>
+
+            <section class="single-img-section">
+                <h2> 
+                    Your journey with Flurgo looks like this
+                </h2>
+                <div class="single-img-holder">
+                    <img src="img/ProcessFlow.png">
+                </div>
+            </section>
+
+            <section class="clearfix bottom-gap-30">
+                <p class="text-center"> What’s your excuse now? </p>
+                <div class="text-box-wrapper">
+                    <input type="text" placeholder="Email ID" id="email2">
+                    <button onClick="requestAccess1()" id="access-button2"> Request Access </button>
+                </div>
+            </section>
+           
+         </div>
+
+    </body>
+
+</html>
+<script>
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD_s4yZJe2KFMVDqydzuCE15ryqMolp2bQ",
+    authDomain: "flurgo-2284f.firebaseapp.com",
+    databaseURL: "https://flurgo-2284f.firebaseio.com",
+    projectId: "flurgo-2284f",
+    storageBucket: "flurgo-2284f.appspot.com",
+    messagingSenderId: "769096844704",
+    appId: "1:769096844704:web:77b656b17f300b7ee6d0c5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+function requestAccess1() {
+    var b = firebase.database().ref("request_access");
+        var c = $("#email1").val(),
+            d = $("#email2").val();
+            if(c != "") {
+                f = { email: c};
+            }else if (d != "") {
+                f = { email: d};
+            }
+            $("#access-button").html("Thank You");
+            $("#email1").hide();
+            $("#email2").hide();
+            $("#access-button2").html("Thank You");
+        return b.push(f).then(function(a) { 
+            $(".sucess").css("display", "block");
+            $("#access-button").val("Thank You");
+        });
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
