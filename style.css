@@ -185,7 +185,7 @@ body {
 }
 
 .girl-sitting-section .first-nest-box p {
-    font-size: 22px;
+    font-size: 19px;
     text-align: justify;
 }
 
@@ -237,7 +237,7 @@ body {
     padding: 5px 20px;
     font-size: 20px;
     margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 5px;
 }
 
 .thumbs-section {
@@ -326,7 +326,7 @@ body {
 }
 
 .sitting-girl-right-span {
-    margin-top: -225px;
+    margin-top: -40px;
 }
 
 .two-sub-section .col-md-7 p {
@@ -497,6 +497,31 @@ body {
         margin-bottom: 4%;
     }
 
+    .girl-sitting-section .first-nest-box h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .girl-sitting-section .first-nest-box p {
+        font-family: MuseoSans;
+        font-size: 19px;
+        font-weight: 500;  
+        font-style: normal;   
+        font-stretch: normal;    
+        line-height: normal;    
+        letter-spacing: 1.1px;
+    }
+
+    .girl-sitting-section {
+        padding-top: 15px;
+        margin-top: 25%;
+        background-color: rgb(101,223,255,0.05);
+    }
+
+    .second-block {
+        margin-top: 10% !important;
+    }
+
 }
 
 @media (max-width: 1600px) {
@@ -507,8 +532,25 @@ body {
         padding-top: 25px;
     }
 
+    .girl-sitting-section .first-nest-box h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .girl-sitting-section .first-nest-box p {
+        font-family: MuseoSans;
+        font-size: 19px;
+        font-weight: 500;  
+        font-style: normal;   
+        font-stretch: normal;    
+        line-height: normal;    
+        letter-spacing: 1.1px;
+    }
+
     .girl-sitting-section {
+        padding-top: 15px;
         margin-top: 25%;
+        background-color: rgb(101,223,255,0.05);
     }
     .big-btn {
         padding: 15px 15% 15px 7%;
@@ -516,14 +558,56 @@ body {
     .access-section > .clearfix {
         padding-top: 11%;
     }    
+
+    .girl-sitting-section .first-nest-box h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .girl-sitting-section .first-nest-box p {
+        font-family: MuseoSans;
+        font-size: 19px;
+        font-weight: 500;  
+        font-style: normal;   
+        font-stretch: normal;    
+        line-height: normal;    
+        letter-spacing: 1.1px;
+    }
+
+    .girl-sitting-section {
+        padding-top: 15px;
+        margin-top: 19%;
+        background-color: rgb(101,223,255,0.05);
+    }
+
+    .second-block {
+        margin-top: 6% !important;
+    }
+
 }
 
 
 @media (max-width: 1440px) {
 
     .girl-sitting-section .first-nest-box h2 {
-        font-size: 26px;
+        font-size: 28px;
         margin-bottom: 20px;
+    }
+    
+    .girl-sitting-section .first-nest-box p {
+        font-family: MuseoSans;
+        font-size: 19px;
+        font-weight: 500;  
+        font-style: normal;   
+        font-stretch: normal;    
+        line-height: normal;    
+        letter-spacing: 1.1px;
+    }
+
+    .girl-sitting-section {
+        padding-top: 15px;
+        margin-top: 15%;
+        background-color: rgb(101,223,255,0.05);
     }
 
     .second-blue-btn {
@@ -583,7 +667,7 @@ body {
     
     .girl-sitting-section .first-nest-box p {
         font-family: MuseoSans;
-        font-size: 21px;
+        font-size: 19px;
         font-weight: 500;  
         font-style: normal;   
         font-stretch: normal;    
@@ -628,7 +712,7 @@ body {
     }
 
     .second-block {
-        margin-top: 2% !important;
+        margin-top: 6% !important;
     }
 
     .girl-sitting-section {
@@ -659,11 +743,46 @@ body {
         padding: 10px 20% 10px 5%;
         font-size: 19px;
     }
+
+    .girl-sitting-section .first-nest-box h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .girl-sitting-section .first-nest-box p {
+        font-family: MuseoSans;
+        font-size: 19px;
+        font-weight: 500;  
+        font-style: normal;   
+        font-stretch: normal;    
+        line-height: normal;    
+        letter-spacing: 1.1px;
+    }
+
+    .girl-sitting-section {
+        padding-top: 15px;
+        margin-top: 10%;
+        background-color: rgb(101,223,255,0.05);
+    }
+
+    .second-block {
+        margin-top: 4% !important;
+    }
+
+    .sitting-girl-right {
+        height: 200px;
+        width: 214px;
+        margin-top: -116px;
+    }
     
 }
 
 @media (max-width: 1024px) {
 
+    .sitting-girl-right {
+        display: none !important;
+    }
+    
     .text-box-wrapper input {
         width: 46%;
     }
