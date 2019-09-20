@@ -57,6 +57,7 @@ body {
     width: 100%;
     height: 100%;
     left: 0;
+    z-index: -1 !important;
 }
 
 .bg-image img {
@@ -109,7 +110,7 @@ body {
 }
 
 .access-section {
-    background-color: #fffcf2;
+    background-color: rgb(220,200,133,0.2);
     margin-top: 20%;
     padding-top: 80px;
 }
@@ -782,7 +783,7 @@ body {
     .sitting-girl-right {
         display: none !important;
     }
-    
+
     .text-box-wrapper input {
         width: 46%;
     }

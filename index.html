@@ -87,7 +87,7 @@
                             </span>
                         </div>
 
-                        <button class="req-btn"> Request Access </button>
+                        <button onClick="scrollToReqAccess()" class="req-btn scroll-btn" > Request Access </button>
                     </div>
 
                 </section>
@@ -120,7 +120,7 @@
                                 <li> Access to industry reports, trend alerts tailored just as you need  </li>
                                 <li> Tools, blogs, softwares indexed neatly so you don’t lose track </li>
                             </ul>
-                            <button class="blue-btn"> Request Access </button>
+                            <button class="blue-btn scroll-btn" onClick="scrollToReqAccess()"> Request Access </button>
                         </div>
                         
                     </div>
@@ -165,7 +165,7 @@
                         </ul>
                     </div>
                 </div>
-                <button class="blue-btn"> Request Access </button>
+                <button class="blue-btn scroll-btn" onClick="scrollToReqAccess()"> Request Access </button>
                 
             </section>
 
@@ -211,7 +211,7 @@
                 </div>
             </section>
 
-            <section class="clearfix bottom-gap-30">
+            <section class="clearfix bottom-gap-30" id="req-access-bottom">
                 <p class="text-center"> What’s your excuse now? </p>
                 <div class="text-box-wrapper">
                     <input type="text" placeholder="Email ID" id="email2">
@@ -225,6 +225,12 @@
 
 </html>
 <script>
+function scrollToReqAccess(){
+    console.log('hi');
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#req-access-bottom").offset().top
+    }, 2000);
+};
 
   // Your web app's Firebase configuration
   var firebaseConfig = {
