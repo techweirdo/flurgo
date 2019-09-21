@@ -110,7 +110,6 @@ body {
 }
 
 .access-section {
-    background-color: rgb(220,200,133,0.2);
     margin-top: 20%;
     padding-top: 80px;
 }
@@ -489,7 +488,7 @@ body {
     }
     
     .thumbs-section {
-        margin-top: 7%;
+        margin-top: 12%;
     }
 
     .thumbs-section h2 {
@@ -563,6 +562,10 @@ body {
     .girl-sitting-section .first-nest-box h2 {
         font-size: 28px;
         margin-bottom: 15px;
+    }
+
+    .thumbs-section {
+        margin-top: 10%;
     }
     
     .girl-sitting-section .first-nest-box p {
@@ -657,6 +660,9 @@ body {
         font-size: 22px;
     }
 
+    .thumbs-section {
+        margin-top: 14%;
+    }
 }
 
 @media (max-width: 1366px) {
@@ -898,6 +904,13 @@ body {
         margin-bottom: 20px;
     }
 
+    .thumbs-section {
+        margin-top: 10%;
+    }
+
+    .nested-block {
+        margin-top: 18% !important;
+    }
 }
 
 @media (max-width: 600px) {
@@ -905,6 +918,10 @@ body {
         display: none !important;
     }
     
+    .thumbs-section {
+        margin-top: 14%;
+    }
+
     .access-section, 
     .text-box-wrapper,
     .landing-section p,
@@ -930,6 +947,7 @@ body {
     }
 
     .access-section {
+        background-color: rgb(220,200,133,0.2);
         padding-top: 15px;
     }    
 
