@@ -268,8 +268,16 @@ function requestAccess1() {
             //$("#access-button2").html("Thank You");
         return b.push(f).then(function(a) { 
             $(".sucess").css("display", "block");
+            // send mail
+            $.post("http://13.233.24.86/flurgo/flurgo_mail.php",
+            {
+                email: f.email
+            },
+            function(data, status){
+                window.location.href = "//flurgo.com/thankyou.html";
+            });
             //$("#access-button").val("Thank You");
-            window.location.href = "//flurgo.com/thankyou.html";
+            
         });
 }
 </script>
