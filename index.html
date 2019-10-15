@@ -271,7 +271,7 @@ function requestAccess1() {
 
             var request = $.ajax({
                 url: 'http://13.233.24.86/flurgo/flurgo_mail.php',
-                type: 'GET',
+                type: 'POST',
                 data: { email: f.email } ,
                 contentType: 'application/json; charset=utf-8'
             });
