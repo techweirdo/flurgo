@@ -23,7 +23,7 @@
 
          <div class="container-fluid prod-wrapper">
             <nav class="nav-header">
-               <img src="img/logo.png" />
+               <a href="/"> <img src="img/logo.png" /></a>
                <!--<button class="sing-btn float-right"> Sign in </button>-->
             </nav>
 
@@ -263,6 +263,7 @@ function requestAccess1() {
         return b.push(f).then(function(a) { 
             $(".sucess").css("display", "block");
             $("#access-button").val("Thank You");
+            window.open("/thankyou.html");
         });
 }
 </script>
