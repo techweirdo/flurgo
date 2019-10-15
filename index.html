@@ -256,6 +256,12 @@ function requestAccess1() {
             }else if (d != "") {
                 f = { email: d};
             }
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(!re.test(String(f).toLowerCase())) {
+                $("#email1").css("border", "2px solid red");
+                $("#email2").css("border", "2px solid red");
+                return false;
+            }
             $("#access-button").html("Thank You");
             $("#email1").hide();
             $("#email2").hide();
@@ -263,7 +269,7 @@ function requestAccess1() {
         return b.push(f).then(function(a) { 
             $(".sucess").css("display", "block");
             $("#access-button").val("Thank You");
-            window.open("/thankyou.html");
+            window.location.href = "//flurgo.com/thankyou.html";
         });
 }
 </script>
