@@ -265,15 +265,24 @@ function requestAccess1() {
             //$("#access-button").html("Thank You");
             $("#email1").hide();
             $("#email2").hide();
+            $("#access-button").hide();
+            $("#access-button2").hide();
             //$("#access-button2").html("Thank You");
-        return b.push(f).then(function(a) { 
-            $(".sucess").css("display", "block");
-            // send mail
-            $.post("http://13.233.24.86/flurgo/flurgo_mail.php",
-            {
-                email: f.email
-            },
-            function(data, status){
+
+            var request = $.ajax({
+                url: 'http://13.233.24.86/flurgo/flurgo_mail.php',
+                type: 'GET',
+                data: { email: f.email } ,
+                contentType: 'application/json; charset=utf-8'
+            });
+
+            request.done(function(data) {
+                // your success code here
+                window.location.href = "//flurgo.com/thankyou.html";
+            });
+
+            request.fail(function(jqXHR, textStatus) {
+                // your failure code here
                 window.location.href = "//flurgo.com/thankyou.html";
             });
             //$("#access-button").val("Thank You");
