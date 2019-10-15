@@ -6,6 +6,7 @@
         <title> Flurgo </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="fb:app_id" content="492055018311185">
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -16,7 +17,7 @@
         <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
         <link rel="stylesheet" href="style.css" />
         <link rel="shortcut icon" href="img/favicon.png" />
-
+        <link rel="stylesheet" href="dist/css/share.bar.css">
     </head>
 
     <body>
@@ -29,15 +30,17 @@
 
             <section class="landing-section">
                 <h2 class="text-center"> 
-                    <div> Thank You </div>
-                    <div> for requesting access to Flurgo </div> 
+                    <div class="thankyou-title"> Thank you for joining the waitlist. </div>
+                    <div>  </div> 
                 </h2>
-                <p class="text-center"> Flurgo is a verified community of professionals helping each other grow </p>
-                
+                <p class="text-center"> We are counting on you to reach our target of 5000 waitlist users for launch. Help us bring you a valuable network by sharing Flurgo on social media.</p>
+                <p class="text-center">Click the share icon below</p>
                 <div class="text-box-wrapper">
                     <!--<input type="text" placeholder="Email ID" id="email1"/>-->
-                    <button id="access-button"> Back to home </button>
+                    <!--<button id="access-button" > Back to home </button>-->
                 </div> 
+                <div class="share-bar" data-url="http://flurgo.com" data-theme="natural" data-title="Hey! Join me on Flurgo, a verified knowledge exchange community for students and professionals. Peers and experts helping you at every step in making bold career moves that makes decision making a cakewalk. Click the link below to join me here." 
+                    data-image-url="http://flurgo.com/img/ProcessFlow.png" data-hashtags="#flurgo " style="width: 100%;text-align: center;"></div>
             </section>
             <div class="position-relative">
                 <div class="bg-image"> 
@@ -49,7 +52,17 @@
          </div>
 
     </body>
+        <script src="dist/js/share.bar.js"></script>
 
+        <script>
+
+            new ShareBar({'facebookAppId': 492055018311185});
+        </script>
+        <style>
+            .thankyou-title {
+                font-size: 54px;
+            }
+        </style>
 </html>
 
 
