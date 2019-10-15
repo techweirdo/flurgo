@@ -55,6 +55,7 @@ function ShareBar(options) {
             this.createSVG();
             this.mergeOptions(options);
             this.containers = document.querySelectorAll(this.selector);
+            console.log('ss' , this.containers);
             this.createBars();
         },
 
@@ -118,6 +119,7 @@ function ShareBar(options) {
 
                 document.body.appendChild(svg);
             }
+            console.log('wa', svg);
         },
 
         mergeOptions: function mergeOptions(options) {
@@ -129,7 +131,7 @@ function ShareBar(options) {
                     classPopup: 'share-popup',
                     facebookAppId: '',
                     networks: [
-                        FACEBOOK, TWITTER, WHATSAPP, TELEGRAM, GOOGLE, LINKEDIN, PINTEREST, EMAIL
+                        FACEBOOK, TWITTER, WHATSAPP, LINKEDIN, EMAIL
                     ],
                     theme: 'natural',
                     buttonWidth: BUTTON_WIDTH,
@@ -192,7 +194,7 @@ function ShareBar(options) {
         createBars: function createBars() {
             var items = this.containers,
                 element = 0;
-
+            console.log('increate brars', items);
             for (element = 0; element < items.length; element++) {
                 this.createBar(items[element]);
             }
@@ -212,11 +214,13 @@ function ShareBar(options) {
             buttonClasses = this.getButtonsSize(element.offsetWidth, count);
 
             for (i; i < count; i++) {
+                console.log('network', networks[i]);
                 networks[i].call(this, element, buttonClasses[i]);
             }
 
             theme += element.getAttribute('data-theme') || this.theme;
             element.className += ' share-bar-container' + theme;
+            console.log('element', element)
             this.bindOpenPopup(element);
             this.bindShare(element);
             this.onCreateBar(element);
@@ -353,6 +357,7 @@ function ShareBar(options) {
         createButton: function createButton(container, socialNetworkClass, className, url, socialNetworkTitle, openInPage) {
             var shareContainer = document.createElement('div'),
                 classPopup = '';
+                console.log('class', socialNetworkClass);
             socialNetworkTitle = socialNetworkTitle || socialNetworkClass;
             className = className || '';
             shareContainer.className = SHARE_BUTTON + ' share-' + socialNetworkClass + className;
@@ -362,7 +367,6 @@ function ShareBar(options) {
             if (!openInPage) {
                 classPopup = this.classPopup;
             }
-
             shareContainer.innerHTML = [
                 '<a class="' + classPopup + '" href="' + url + '" title="Compartilhar via ' + socialNetworkTitle + '" data-social-network="' + socialNetworkClass + '" target="_blank" rel="external">',
                 this.createContentButton(socialNetworkClass, socialNetworkTitle),
@@ -507,11 +511,11 @@ function ShareBar(options) {
 
         createWhatsappButton: function createWhatsappButton(container, buttonClass) {
             var data = this.getMetadataFromElement(container);
-
+            console.log('in wa', data);
             if (!this.isSmallScreen() || !this.isTouch()) {
                 return false;
             }
-
+            
             this.createButton(
                 container,
                 WHATSAPP,
