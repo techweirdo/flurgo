@@ -41,9 +41,7 @@
 
         <div class="text-box-wrapper">
           <input type="text" placeholder="Email ID" id="email1" />
-          <button onClick="requestAccess1()" id="access-button">
-            Request Access
-          </button>
+          <button onClick="email1()" id="access-button">Request Access</button>
         </div>
       </section>
       <div class="position-relative">
@@ -276,16 +274,39 @@
         <p class="text-center">What’s your excuse now?</p>
         <div class="text-box-wrapper">
           <input type="text" placeholder="Email ID" id="email2" />
-          <button onClick="requestAccess1()" id="access-button2">
-            Request Access
-          </button>
+          <button onClick="email2()" id="access-button2">Request Access</button>
         </div>
       </section>
     </div>
   </body>
 </html>
 <script>
-  function mailSent() {
+  function email1() {
+    mailSent1();
+    requestAccess1();
+  }
+  function email2() {
+    mailSent2();
+    requestAccess1();
+  }
+
+  function mailSent1() {
+    console.log("hello");
+    email = document.getElementById("email1").value;
+    fetch("http://13.124.139.239/flurgo-email/common_mail_sending.php", {
+      method: "post",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+    // console.log("hello")
+  }
+
+  function mailSent2() {
     console.log("hello");
     email = document.getElementById("email2").value;
     fetch("http://13.124.139.239/flurgo-email/common_mail_sending.php", {
@@ -325,7 +346,6 @@
   firebase.initializeApp(firebaseConfig);
 
   function requestAccess1() {
-    
     var b = firebase.database().ref("request_access");
     var c = $("#email1").val(),
       d = $("#email2").val();
