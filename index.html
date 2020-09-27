@@ -293,7 +293,7 @@
   function mailSent1() {
     console.log("hello");
     email = document.getElementById("email1").value;
-    fetch("http://13.124.139.239/flurgo-email/common_mail_sending.php", {
+    fetch("https://elfinpay.in/flurgo-email/common_mail_sending.php", {
       method: "post",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -309,7 +309,7 @@
   function mailSent2() {
     console.log("hello");
     email = document.getElementById("email2").value;
-    fetch("http://13.124.139.239/flurgo-email/common_mail_sending.php", {
+    fetch("https://elfinpay.in/flurgo-email/common_mail_sending.php", {
       method: "post",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -383,6 +383,5 @@
       // your failure code here
       window.location.href = "//flurgo.com/thankyou.html";
     });
-    mailSent();
   }
 </script>
