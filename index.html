@@ -291,35 +291,7 @@
   }
 
   function mailSent1() {
-    console.log("hello");
     email = document.getElementById("email1").value;
-    fetch("https://elfinpay.in/flurgo-email/common_mail_sending.php", {
-      method: "post",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res));
-    // console.log("hello")
-  }
-
-  function mailSent2() {
-    console.log("hello");
-    email = document.getElementById("email2").value;
-    // fetch("https://elfinpay.in/flurgo-email/common_mail_sending.php", {
-    //   method: "post",
-    //   headers: {
-    //     Accept: "application/json, text/plain, */*",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ email }),
-    // })
-    //   .then((res) => res.json())
-    //   .then((res) => console.log(res));
-    // console.log("hello")
     var request = $.ajax({
       url: "https://elfinpay.in/flurgo-email/common_mail_sending.php",
       type: "POST",
@@ -336,7 +308,26 @@
       // your failure code here
       window.location.href = "//flurgo.com/thankyou.html";
     });
+  }
 
+  function mailSent2() {
+    email = document.getElementById("email2").value;
+    var request = $.ajax({
+      url: "https://elfinpay.in/flurgo-email/common_mail_sending.php",
+      type: "POST",
+      data: { email: email },
+      contentType: "application/json; charset=utf-8",
+    });
+
+    request.done(function (data) {
+      // your success code here
+      window.location.href = "//flurgo.com/thankyou.html";
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+      // your failure code here
+      window.location.href = "//flurgo.com/thankyou.html";
+    });
   }
 
   function scrollToReqAccess() {
