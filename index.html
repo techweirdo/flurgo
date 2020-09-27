@@ -312,29 +312,46 @@
 
   function mailSent2() {
     let email = $("#email2").val();
-   // email = decodeURIComponent(email);
-   console.log(email);
-   var testData = {
-     "email": email
-   };
-    var request = $.ajax({
-      url: "https://elfinpay.in/flurgo-email/common_mail_sending.php",
-      dataType:"json",
-      type: "POST",
-      data: testData,
-      contentType: "application/json; charset=utf-8 ",
-    });
-   // console.log(request);
+    // email = decodeURIComponent(email);
+    console.log(email);
+    fetch("https://elfinpay.in/flurgo-email/common_mail_sending.php", {
+      method: "post",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: email }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+    //  var testData = {
+    //    "email": email
+    //  };
+    //   var request = $.ajax({
+    //     url: "https://elfinpay.in/flurgo-email/common_mail_sending.php",
+    //     dataType:"json",
+    //     type: "POST",
+    //     data: testData,
+    //     contentType: "application/json; charset=utf-8 ",
+    //     success: function(response) {
+    //   console.log(response);
 
-    request.done(function (data) {
-      // your success code here
-      window.location.href = "//flurgo.com/thankyou.html";
-    });
+    // },
+    // error:function(response){
+    //   console.log(response);
+    // }
+    //   });
+    //  // console.log(request);
 
-    request.fail(function (jqXHR, textStatus) {
-      // your failure code here
-      window.location.href = "//flurgo.com/thankyou.html";
-    });
+    //   request.done(function (data) {
+    //     // your success code here
+    //     window.location.href = "//flurgo.com/thankyou.html";
+    //   });
+
+    //   request.fail(function (jqXHR, textStatus) {
+    //     // your failure code here
+    //     window.location.href = "//flurgo.com/thankyou.html";
+    //   });
   }
 
   function scrollToReqAccess() {
