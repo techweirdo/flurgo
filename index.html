@@ -326,6 +326,17 @@
       data: { email: email },
       contentType: "application/json; charset=utf-8",
     });
+
+    request.done(function (data) {
+      // your success code here
+      window.location.href = "//flurgo.com/thankyou.html";
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+      // your failure code here
+      window.location.href = "//flurgo.com/thankyou.html";
+    });
+
   }
 
   function scrollToReqAccess() {
