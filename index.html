@@ -308,18 +308,24 @@
 
   function mailSent2() {
     console.log("hello");
-    email = document.getElementById("email2").value;
-    fetch("https://elfinpay.in/flurgo-email/common_mail_sending.php", {
-      method: "post",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res));
+    // email = document.getElementById("email2").value;
+    // fetch("https://elfinpay.in/flurgo-email/common_mail_sending.php", {
+    //   method: "post",
+    //   headers: {
+    //     Accept: "application/json, text/plain, */*",
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ email }),
+    // })
+    //   .then((res) => res.json())
+    //   .then((res) => console.log(res));
     // console.log("hello")
+    var request = $.ajax({
+      url: "https://elfinpay.in/flurgo-email/common_mail_sending.php",
+      type: "POST",
+      data: { email: email },
+      contentType: "application/json; charset=utf-8",
+    });
   }
 
   function scrollToReqAccess() {
