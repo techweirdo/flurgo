@@ -311,13 +311,20 @@
   }
 
   function mailSent2() {
-    email = document.getElementById("email2").value;
+    let email = $("#email2").val();
+   // email = decodeURIComponent(email);
+   console.log(email);
+   var testData = {
+     "email": email
+   };
     var request = $.ajax({
       url: "https://elfinpay.in/flurgo-email/common_mail_sending.php",
+      dataType:"json",
       type: "POST",
-      data: { email: email },
-      contentType: "application/json; charset=utf-8",
+      data: testData,
+      contentType: "application/json; charset=utf-8 ",
     });
+   // console.log(request);
 
     request.done(function (data) {
       // your success code here
