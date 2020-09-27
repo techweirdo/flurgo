@@ -302,7 +302,7 @@
       body: JSON.stringify({ email: email }),
     })
       .then((res) => res.json())
-      .then((res) => console.log(res));
+      .then((res) => (window.location.href = "//flurgo.com/thankyou.html"));
   }
 
   function mailSent2() {
@@ -318,7 +318,7 @@
       body: JSON.stringify({ email: email }),
     })
       .then((res) => res.json())
-      .then((res) => console.log(res));
+      .then((res) => (window.location.href = "//flurgo.com/thankyou.html"));
     //  var testData = {
     //    "email": email
     //  };
